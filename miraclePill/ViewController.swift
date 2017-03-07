@@ -13,6 +13,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet weak var countyPicker: UIPickerView!
     @IBOutlet weak var CountyPickerBtn: UIButton!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var countryInput: UITextField!
+    @IBOutlet weak var buyNowBtn: UIButton!
+    
     
     
     let Counties = ["Suffolk", "Cambridgeshire", "Liverpool", "Northampton", "Essex", "Cardiff", "Loughborough"]
@@ -28,9 +32,16 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func buyNowBtnPressed(_ sender: Any) {
+
+    }
     @IBAction func countyBtnPressed(_ sender: Any) {
         countyPicker.isHidden = false
+        countryLabel.isHidden = true
+        countryInput.isHidden = true
+        buyNowBtn.isHidden = true
     }
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -46,6 +57,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         //countyPicker.isHidden = true
         CountyPickerBtn.setTitle(Counties[row], for: UIControlState.normal)
         countyPicker.isHidden = true
+        countryLabel.isHidden = false
+        countryInput.isHidden = false
+        buyNowBtn.isHidden = false
     }
 } 
 

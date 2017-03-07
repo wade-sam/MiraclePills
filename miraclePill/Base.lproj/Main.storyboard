@@ -117,7 +117,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CITY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D3-tT-2WB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="COUNTRY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D3-tT-2WB">
                                 <rect key="frame" x="39" y="474" width="303" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="7Cg-XQ-wni"/>
@@ -126,7 +126,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your city..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X4l-W1-Nok">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Country..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X4l-W1-Nok">
                                 <rect key="frame" x="39" y="503" width="303" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Nhf-3b-Fzt"/>
@@ -159,7 +159,10 @@
                                     <constraint firstAttribute="height" constant="45" id="Eff-YM-7dt"/>
                                     <constraint firstAttribute="width" constant="237" id="kNz-ha-SI4"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="buyNowBtn"/>
+                                <state key="normal" title="BuyNowBtn" image="buyNowBtn"/>
+                                <connections>
+                                    <action selector="buyNowBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uIl-Xb-1SR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -210,7 +213,21 @@
                     </view>
                     <connections>
                         <outlet property="CountyPickerBtn" destination="oV2-wx-hGt" id="0xj-XL-dLi"/>
+                        <outlet property="addressInput" destination="OrU-2q-Udk" id="fNE-rW-cF2"/>
+                        <outlet property="addressLabel" destination="a7W-9t-QMc" id="twI-9a-ghb"/>
+                        <outlet property="buyNowBtn" destination="T22-Go-BOS" id="nxk-lf-jYV"/>
+                        <outlet property="cityInput" destination="n3c-Hp-rMZ" id="DJo-dA-hYD"/>
+                        <outlet property="cityLabel" destination="Cul-Hb-wt0" id="d4q-US-iFV"/>
+                        <outlet property="countryInput" destination="X4l-W1-Nok" id="6cE-1V-rbX"/>
+                        <outlet property="countryLabel" destination="0D3-tT-2WB" id="aQF-CG-JDf"/>
                         <outlet property="countyPicker" destination="ZFM-mn-9cA" id="U3x-RF-fbP"/>
+                        <outlet property="countyPickerLabel" destination="LgO-hT-abF" id="s34-Ee-3W6"/>
+                        <outlet property="divider" destination="DRb-Kc-QpQ" id="y6l-Yh-xpF"/>
+                        <outlet property="miraclePillsImage" destination="bEy-7X-4P2" id="1ys-HP-LUe"/>
+                        <outlet property="miraclePillsLabel" destination="kVB-HU-IKH" id="w8G-sM-jmc"/>
+                        <outlet property="nameInput" destination="41m-Sa-Obf" id="A4s-Sq-6HY"/>
+                        <outlet property="nameLabel" destination="jox-gn-gPn" id="pUM-NQ-mhV"/>
+                        <outlet property="priceLabel" destination="k7Q-gc-Ed1" id="b7u-ra-7hO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
